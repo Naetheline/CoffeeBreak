@@ -3,6 +3,7 @@ package com.softcat.coffeebreak;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.CropsBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,7 +21,7 @@ public class CoffeeBreakBlocks {
 
         event.getRegistry().registerAll(
 
-                new CoffeeCropsBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0)).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_crop")
+                new CoffeeCropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP)).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_crop")
 
         );
     }

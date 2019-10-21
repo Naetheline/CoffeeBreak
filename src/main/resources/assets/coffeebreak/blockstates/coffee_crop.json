@@ -1,9 +1,13 @@
 
 {
   "variants": {
-    "age=0": { "model": "coffeebreak:coffee_crop_stage0" },
-    "age=1": { "model": "coffeebreak:coffee_crop_stage1" },
-    "age=2": { "model": "coffeebreak:coffee_crop_stage2" },
-    "age=3": { "model": "coffeebreak:coffee_crop_stage3" }
+    "age=0": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=1": { "model": "coffeebreak:block/coffee_crop_stage1" },
+    "age=2": { "model": "coffeebreak:block/coffee_crop_stage2" },
+    "age=3": { "model": "coffeebreak:block/coffee_crop_stage3" },
+    "age=4": { "model": "coffeebreak:block/coffee_crop_stage3" },
+    "age=5": { "model": "coffeebreak:block/coffee_crop_stage3" },
+    "age=6": { "model": "coffeebreak:block/coffee_crop_stage3" },
+    "age=7": { "model": "coffeebreak:block/coffee_crop_stage3" }
   }
 }
