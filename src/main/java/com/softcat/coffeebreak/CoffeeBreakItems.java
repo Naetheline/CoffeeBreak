@@ -6,7 +6,9 @@
 package com.softcat.coffeebreak;
 
 
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -17,21 +19,21 @@ import net.minecraftforge.registries.ObjectHolder;
 public class CoffeeBreakItems {
 
     public static final Item coffee_beans = null;
+    public static final Item coffee_beans_roasted = null;
+    public static final Item bottle_hot_water = null;
+    public static final Item cup_empty = null;
+    public static final Item cup_coffee = null;
 
-    /**
-     * The actual event handler that registers the custom items.
-     *
-     * @param event The event this event handler handles
-     */
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         //In here you pass in all item instances you want to register.
         //Make sure you always set the registry name.
         event.getRegistry().registerAll(
-
-                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans"),
-                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans_roasted")
-
+                new BlockNamedItem(CoffeeBreakBlocks.coffee_crop, new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans"),
+                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans_roasted"),
+                new Item(new Item.Properties().containerItem(Items.GLASS_BOTTLE).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "bottle_hot_water"),
+                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_empty"),
+                new CupItem(new Item.Properties().containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_coffee")
         );
     }
 }

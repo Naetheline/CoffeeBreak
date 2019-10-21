@@ -1,4 +1,8 @@
 {
   "item.coffeebreak.coffee_beans": "Coffee beans",
-  "item.coffeebreak.coffee_beans_roasted": "Roasted coffee beans"
+  "item.coffeebreak.coffee_beans_roasted": "Roasted coffee beans",
+  "item.coffeebreak.bottle_hot_water": "Bottle of hot water",
+  "item.coffeebreak.cup_empty": "Empty cup",
+  "item.coffeebreak.cup_coffee": "Cup of coffee",
+  "block.coffeebreak.coffee_crop": "Coffee"
 }

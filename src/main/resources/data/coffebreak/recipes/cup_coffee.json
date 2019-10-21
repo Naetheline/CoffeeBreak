@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "coffeebreak:cup_empty"
+    },
+    {
+      "item": "coffeebreak:bottle_hot_water"
+    },
+    {
+      "item": "coffeebreak:coffee_beans_roasted"
+    }
+  ],
+  "result": {
+    "item": "coffeebreak:cup_coffee"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "coffeebreak:block/coffee_crop_stage0"
+  }
+}
