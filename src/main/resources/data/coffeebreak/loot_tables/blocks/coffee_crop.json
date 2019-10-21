@@ -2,14 +2,21 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "tutorial_block",
-      "rolls": 2,
+      "name": "coffee_drop",
+	  "conditions": [
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 1
+				}
+			],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "coffeebreak:coffee_beans"
         }
       ]
+	  
     }
   ]
 }

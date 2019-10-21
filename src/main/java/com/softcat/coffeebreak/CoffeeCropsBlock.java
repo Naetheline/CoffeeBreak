@@ -1,11 +1,10 @@
 package com.softcat.coffeebreak;
 
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CropsBlock;
-import net.minecraft.block.FarmlandBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.state.IProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -15,10 +14,10 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.BlockStateContainer;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CoffeeCropsBlock extends CropsBlock {
-
-    public static final IntegerProperty CROP_AGE = BlockStateProperties.AGE_0_3;
 
     public CoffeeCropsBlock(Properties builder)
     {
@@ -26,15 +25,13 @@ public class CoffeeCropsBlock extends CropsBlock {
         this.setDefaultState(this.stateContainer.getBaseState().with(this.getAgeProperty(), Integer.valueOf(0)));
     }
 
-    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.getBlock() instanceof FarmlandBlock;
-    }
-
+    @OnlyIn(Dist.CLIENT)
     protected IItemProvider getSeedsItem() {
         return CoffeeBreakItems.coffee_beans;
     }
     public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
-        return new ItemStack(CoffeeBreakItems.coffee_beans, 2);
+
+        return new ItemStack(Items.DIAMOND, 2);
     }
 
 }
