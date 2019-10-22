@@ -1,8 +1,9 @@
-package com.softcat.coffeebreak;
+package com.softcat.coffeebreak.register;
 
 
+import com.softcat.coffeebreak.CoffeeBreakMod;
+import com.softcat.coffeebreak.blocks.CoffeeCropsBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.CropsBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.event.RegistryEvent;

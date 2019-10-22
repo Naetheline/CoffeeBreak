@@ -3,9 +3,12 @@
  *
  */
 
-package com.softcat.coffeebreak;
+package com.softcat.coffeebreak.register;
 
 
+import com.softcat.coffeebreak.CoffeeBreakMod;
+import com.softcat.coffeebreak.items.CupItem;
+import com.softcat.coffeebreak.register.CoffeeBreakBlocks;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
