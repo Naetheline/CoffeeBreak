@@ -24,7 +24,7 @@ displayName="Softcat's Coffee Break" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 # logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to my cat" #optional
+credits="Thanks to Neurad for the art" #optional
 # A text field displayed in the mod UI
 authors="Softcat team" #optional
 # The description text for the mod (multi line!) (#mandatory)

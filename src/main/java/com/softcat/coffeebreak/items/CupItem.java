@@ -1,6 +1,8 @@
 package com.softcat.coffeebreak.items;
 
 
+import com.softcat.coffeebreak.Effects.Insomnia;
+import com.softcat.coffeebreak.register.CoffeeBreakEffects;
 import com.softcat.coffeebreak.register.CoffeeBreakItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,12 +10,14 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;;
 import net.minecraft.item.UseAction;
+import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class CupItem extends Item {
@@ -40,6 +44,7 @@ public class CupItem extends Item {
         if (!worldIn.isRemote) {
             entityLiving.addPotionEffect(new EffectInstance(Effects.SPEED, DURATION));
             entityLiving.addPotionEffect(new EffectInstance(Effects.HASTE, DURATION));
+            entityLiving.addPotionEffect(new EffectInstance(CoffeeBreakEffects.insomnia, DURATION));
         }
 
         if (entityLiving == null || !((PlayerEntity) entityLiving).isCreative()) {
