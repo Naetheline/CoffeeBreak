@@ -34,7 +34,7 @@
           "condition": "minecraft:block_state_property",
           "block": "coffeebreak:coffee_crop",
           "properties": {
-            "age": "7"
+            "age": "15"
           }
         }
       ]

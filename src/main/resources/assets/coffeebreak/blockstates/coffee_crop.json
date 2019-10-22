@@ -3,11 +3,19 @@
   "variants": {
     "age=0": { "model": "coffeebreak:block/coffee_crop_stage0" },
     "age=1": { "model": "coffeebreak:block/coffee_crop_stage0" },
-    "age=2": { "model": "coffeebreak:block/coffee_crop_stage1" },
-    "age=3": { "model": "coffeebreak:block/coffee_crop_stage1" },
-    "age=4": { "model": "coffeebreak:block/coffee_crop_stage2" },
-    "age=5": { "model": "coffeebreak:block/coffee_crop_stage2" },
-    "age=6": { "model": "coffeebreak:block/coffee_crop_stage2" },
-    "age=7": { "model": "coffeebreak:block/coffee_crop_stage3" }
+    "age=2": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=3": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=4": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=5": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=6": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=7": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=8": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=9": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=10": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=11": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=12": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=13": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=14": { "model": "coffeebreak:block/coffee_crop_stage0" },
+    "age=15": { "model": "coffeebreak:block/coffee_crop_stage0" }
   }
 }
