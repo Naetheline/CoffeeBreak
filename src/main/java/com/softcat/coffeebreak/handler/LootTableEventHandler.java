@@ -6,7 +6,22 @@ import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.TableLootEntry;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+
+
+/* ## NOTE ##
+ *
+ *  This seems to not work for now. LootTableLoadEvent is not fired
+ *  for vanilla loot table.
+ *  Leaving this here because it seems ton be te proper way to inject loot.
+ *
+ *  Workaround by using the BreakEvent in BreakEventHandler.java
+ */
+
+
+
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class LootTableEventHandler {
     @SubscribeEvent
     public  void onLootTableLoad(LootTableLoadEvent event) {

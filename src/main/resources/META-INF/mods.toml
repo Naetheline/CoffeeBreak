@@ -24,13 +24,13 @@ displayName="Softcat's Coffee Break" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 # logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to Neurad" #optional
+credits="Thanks to my cat" #optional
 # A text field displayed in the mod UI
-authors="Naetheline" #optional
+authors="Softcat team" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Take a break !
-Have some coffee !'''
+Take a break,
+have a coffee !'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 #[[dependencies.examplemod]] #optional
     # the modid of the dependency
