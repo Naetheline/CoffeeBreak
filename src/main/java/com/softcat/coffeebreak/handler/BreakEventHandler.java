@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BreakEventHandler {
 
-    public static final float DROP_CHANCE = 1f/2f;
+    public static final float DROP_CHANCE = 1f/8f;
 
     @SubscribeEvent
     public static void onGrassBroken(BlockEvent.BreakEvent event)
