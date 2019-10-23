@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 public class CupItem extends Item {
 
-    public static int DURATION = 1500;
+    public static int DURATION = 4000;
 
     public CupItem(Item.Properties builder)
     {

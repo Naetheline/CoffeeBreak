@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cross",
   "textures": {
-    "all": "coffeebreak:block/coffee_crop_stage2"
+    "cross": "coffeebreak:block/coffee_crop_stage2"
   }
 }
