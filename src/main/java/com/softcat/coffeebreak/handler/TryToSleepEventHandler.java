@@ -1,5 +1,6 @@
 package com.softcat.coffeebreak.handler;
 
+import com.softcat.coffeebreak.Effects.Insomnia;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
@@ -27,9 +28,27 @@ public class TryToSleepEventHandler
     {
         for (EffectInstance effect : event.getPlayer().getActivePotionEffects())
         {
-            if (effect.getEffectName().equals("insomnia"))
+            if (effect.getEffectName().equals("Insomnia"))
             {
-                event.getPlayer().sendMessage(new TranslationTextComponent("The coffee keeps you awake !", "The coffee keeps you awake !"));
+                switch (((Insomnia)effect.getPotion()).getCause())
+                {
+                    case COFFEE:
+                    {
+                        event.getPlayer().sendMessage(new TranslationTextComponent("The coffee keeps you awake !", "The coffee keeps you awake !"));
+                        break;
+                    }
+                    case GREENTEA:
+                    {
+                        event.getPlayer().sendMessage(new TranslationTextComponent("The green tea keeps you awake !", "The green tea keeps you awake !"));
+                       break;
+                    }
+                    case ENERGYDRINK:
+                    {
+                        event.getPlayer().sendMessage(new TranslationTextComponent("You really thought you could sleep after drinking an energy drink ?", "You really thought you could sleep after an energy drink ?"));
+                     break;
+                    }
+                }
+
                 event.setResult(PlayerEntity.SleepResult.OTHER_PROBLEM);
             }
         }

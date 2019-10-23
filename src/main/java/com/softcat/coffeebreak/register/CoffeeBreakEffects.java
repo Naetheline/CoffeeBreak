@@ -14,14 +14,18 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(CoffeeBreakMod.MOD_ID)
 public class CoffeeBreakEffects {
 
-    public static final Effect insomnia = null;
+    public static final Effect insomnia_coffee = null;
+    public static final Effect insomnia_energy = null;
+    public static final Effect insomnia_greentea = null;
 
     @SubscribeEvent
     public static void registerEffects(RegistryEvent.Register<Effect> event) {
 
         event.getRegistry().registerAll(
 
-                new Insomnia().setRegistryName("insomnia")
+                new Insomnia().setRegistryName("insomnia_coffee"),
+                new Insomnia(Insomnia.CauseInsomnia.ENERGYDRINK).setRegistryName("insomnia_energy"),
+                new Insomnia(Insomnia.CauseInsomnia.GREENTEA).setRegistryName("insomnia_greentea")
 
         );
     }
