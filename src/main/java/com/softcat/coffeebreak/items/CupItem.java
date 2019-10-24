@@ -63,6 +63,7 @@ public class CupItem extends Item {
                 }
                 case GREENTEA:
                 {
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, DURATION));
                     entityLiving.addPotionEffect(new EffectInstance(CoffeeBreakEffects.insomnia_greentea, DURATION));
                 }
                 case ENERGYDRINK:
