@@ -94,7 +94,7 @@ public class CoffeeCropsBlock extends SugarCaneBlock implements IGrowable{
         }
 
     protected int getBonemealAgeIncrease(World worldIn) {
-        return MathHelper.nextInt(worldIn.rand, 2, 5);
+        return MathHelper.nextInt(worldIn.rand, 2, 13);
     }
 
     public void grow(World worldIn, BlockPos pos, BlockState state) {
