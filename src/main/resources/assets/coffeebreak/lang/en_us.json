@@ -6,5 +6,7 @@
   "item.coffeebreak.cup_coffee": "Cup of coffee",
   "item.coffeebreak.cup_greentea": "Cup of green tea",
   "item.coffeebreak.energy_drink": "Energy drink",
-  "block.coffeebreak.coffee_crop": "Coffee"
+  "block.coffeebreak.coffee_crop": "Coffee",
+  "item.coffeebreak.cup_espresso": "Espresso",
+  "item.coffeebreak.cup_double_espresso": "Double espresso"
 }

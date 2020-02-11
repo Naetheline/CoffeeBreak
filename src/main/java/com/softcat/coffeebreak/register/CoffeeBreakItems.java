@@ -28,19 +28,23 @@ public class CoffeeBreakItems {
     public static final Item cup_coffee = null;
     public static final Item cup_greentea = null;
     public static final Item energy_drink = null;
+    public static final Item cup_espresso = null;
+    public static final Item cup_double_espresso = null;
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         //In here you pass in all item instances you want to register.
         //Make sure you always set the registry name.
         event.getRegistry().registerAll(
-                new BlockNamedItem(CoffeeBreakBlocks.coffee_crop, new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans"),
-                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans_roasted"),
-                new Item(new Item.Properties().containerItem(Items.GLASS_BOTTLE).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "bottle_hot_water"),
-                new Item(new Item.Properties()).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_empty"),
-                new CupItem(new Item.Properties().containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_coffee"),
-                new CupItem(CupItem.Drink.GREENTEA, new Item.Properties().containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_greentea"),
-                new CupItem(CupItem.Drink.ENERGYDRINK, new Item.Properties().containerItem(Items.GLASS_BOTTLE).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "energy_drink")
+                new BlockNamedItem(CoffeeBreakBlocks.coffee_crop, new Item.Properties().group(CoffeeBreakMod.coffeeTab)).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans"),
+                new Item(new Item.Properties().group(CoffeeBreakMod.coffeeTab)).setRegistryName(CoffeeBreakMod.MOD_ID, "coffee_beans_roasted"),
+                new Item(new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(Items.GLASS_BOTTLE).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "bottle_hot_water"),
+                new Item(new Item.Properties().group(CoffeeBreakMod.coffeeTab)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_empty"),
+                new CupItem(new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_coffee"),
+                new CupItem(CupItem.Drink.GREENTEA, new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_greentea"),
+                new CupItem(CupItem.Drink.ENERGYDRINK, new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(Items.GLASS_BOTTLE).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "energy_drink"),
+                new CupItem(CupItem.Drink.ESPRESSO, new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_espresso"),
+                new CupItem(CupItem.Drink.DOUBLE, new Item.Properties().group(CoffeeBreakMod.coffeeTab).containerItem(cup_empty).maxStackSize(1)).setRegistryName(CoffeeBreakMod.MOD_ID, "cup_double_espresso")
         );
     }
 }

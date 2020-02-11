@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 
 public class CupItem extends Item {
 
-    public enum Drink {COFFEE, ENERGYDRINK, GREENTEA}
+    public enum Drink {COFFEE, ENERGYDRINK, GREENTEA, ESPRESSO, DOUBLE}
 
     public static int DURATION = 4000;
 
@@ -71,6 +71,19 @@ public class CupItem extends Item {
                     entityLiving.addPotionEffect(new EffectInstance(Effects.HASTE, DURATION));
                     entityLiving.addPotionEffect(new EffectInstance(CoffeeBreakEffects.insomnia_energy, DURATION));
                     break;
+                }
+                case ESPRESSO :
+                {
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.SPEED, DURATION * 2));
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.HASTE, DURATION * 2));
+                    entityLiving.addPotionEffect(new EffectInstance(CoffeeBreakEffects.insomnia_coffee, DURATION * 2));
+                }
+                case DOUBLE :
+                {
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.SPEED, DURATION * 4));
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.HASTE, DURATION * 4));
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, DURATION * 4));
+                    entityLiving.addPotionEffect(new EffectInstance(CoffeeBreakEffects.insomnia_coffee, DURATION * 4));
                 }
             }
 

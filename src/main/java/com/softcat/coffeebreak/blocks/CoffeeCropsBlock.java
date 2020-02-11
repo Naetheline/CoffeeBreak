@@ -1,26 +1,20 @@
 package com.softcat.coffeebreak.blocks;
 
 
-import com.softcat.coffeebreak.register.CoffeeBreakItems;
 import net.minecraft.block.*;
-import net.minecraft.fluid.IFluidState;
-import net.minecraft.item.ItemStack;
 import net.minecraft.state.IntegerProperty;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.world.server.ServerWorld;
+
 import net.minecraftforge.common.PlantType;
 
 import java.util.Random;
 
-public class CoffeeCropsBlock extends SugarCaneBlock implements IGrowable{
+public class CoffeeCropsBlock extends  SugarCaneBlock implements IGrowable{
 
     public static int MAX_SIZE = 3;
     public static int MAX_AGE = 15;
@@ -114,7 +108,6 @@ public class CoffeeCropsBlock extends SugarCaneBlock implements IGrowable{
         worldIn.setBlockState(pos, this.withAge(i), 2);
     }
 
-
     /**
      * Whether this IGrowable can grow
      */
@@ -128,6 +121,14 @@ public class CoffeeCropsBlock extends SugarCaneBlock implements IGrowable{
 
     public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
         return true;
+    }
+
+
+    // TODO check that when it got a name because for now I've no idea what it is doing.....
+    @Override
+    public void func_225535_a_(ServerWorld serverWorld, Random random, BlockPos blockPos, BlockState blockState) {
+        this.grow(serverWorld,random, blockPos,blockState);
+      //   return !this.isMaxAge(blockState) || (serverWorld.getBlockState(blockPos.up()).getBlock() == Blocks.AIR && i < MAX_SIZE ) ;;
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
