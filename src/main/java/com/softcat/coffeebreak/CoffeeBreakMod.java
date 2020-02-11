@@ -14,7 +14,7 @@ public class CoffeeBreakMod {
 
     public static final String MOD_ID = "coffeebreak";
 
-    public static ItemGroup coffeeTab = new ItemGroup("Coffe Break") {
+    public static ItemGroup coffeeTab = new ItemGroup("Coffee Break") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(CoffeeBreakItems.coffee_beans_roasted, 1);
