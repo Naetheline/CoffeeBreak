@@ -95,6 +95,8 @@ public class CupItem extends Item {
             if (stack.isEmpty()) {
                 switch (drinkType) {
                     case COFFEE:
+                    case ESPRESSO:
+                    case DOUBLE:
                     case GREENTEA: {
                         return new ItemStack(CoffeeBreakItems.cup_empty);
                     }
