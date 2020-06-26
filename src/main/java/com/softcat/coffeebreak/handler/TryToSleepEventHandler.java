@@ -34,17 +34,17 @@ public class TryToSleepEventHandler
                 {
                     case COFFEE:
                     {
-                        event.getPlayer().sendMessage(new TranslationTextComponent("The coffee keeps you awake !", "The coffee keeps you awake !"));
+                        event.getPlayer().sendStatusMessage(new TranslationTextComponent("The coffee keeps you awake !", "The coffee keeps you awake !"), true);
                         break;
                     }
                     case GREENTEA:
                     {
-                        event.getPlayer().sendMessage(new TranslationTextComponent("The green tea keeps you awake !", "The green tea keeps you awake !"));
+                        event.getPlayer().sendStatusMessage(new TranslationTextComponent("The green tea keeps you awake !", "The green tea keeps you awake !"), true);
                        break;
                     }
                     case ENERGYDRINK:
                     {
-                        event.getPlayer().sendMessage(new TranslationTextComponent("You really thought you could sleep after drinking an energy drink ?", "You really thought you could sleep after an energy drink ?"));
+                        event.getPlayer().sendStatusMessage(new TranslationTextComponent("You really thought you could sleep after drinking an energy drink ?", "You really thought you could sleep after an energy drink ?"), true);
                      break;
                     }
                 }

@@ -12,6 +12,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class CoffeeBreakRendering {
     @SubscribeEvent
     public static void onFMLClientSetup(FMLClientSetupEvent event) {
-        RenderTypeLookup.setRenderLayer(CoffeeBreakBlocks.coffee_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(CoffeeBreakBlocks.coffee_crop, RenderType.getCutout());
     }
 }
