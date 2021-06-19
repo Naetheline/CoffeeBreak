@@ -64,7 +64,7 @@ public class CoffeeCropsBlock extends  SugarCaneBlock implements IGrowable{
     }
     @Override
     public net.minecraftforge.common.PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.Crop;
+        return PlantType.CROP;
     }
 
     public IntegerProperty getAgeProperty() {
@@ -126,9 +126,9 @@ public class CoffeeCropsBlock extends  SugarCaneBlock implements IGrowable{
 
     // TODO check that when it got a name because for now I've no idea what it is doing.....
     @Override
-    public void func_225535_a_(ServerWorld serverWorld, Random random, BlockPos blockPos, BlockState blockState) {
-        this.grow(serverWorld,random, blockPos,blockState);
-      //   return !this.isMaxAge(blockState) || (serverWorld.getBlockState(blockPos.up()).getBlock() == Blocks.AIR && i < MAX_SIZE ) ;;
+    public void grow(ServerWorld serverWorld, Random random, BlockPos blockPos, BlockState blockState) {
+        this.grow(serverWorld, blockPos,blockState);
+        //return !this.isMaxAge(blockState) || (serverWorld.getBlockState(blockPos.up()).getBlock() == Blocks.AIR && i < MAX_SIZE ) ;;
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {

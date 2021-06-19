@@ -1,13 +1,5 @@
 package com.softcat.coffeebreak.handler;
 
-/*
- * ## NOTE ##
- *
- * This is a dirty workaround.
- * The proper way to inject loot is written
- *  in LootTableEventHandler.java
- */
-
 
 import com.softcat.coffeebreak.register.CoffeeBreakItems;
 import net.minecraft.block.Blocks;
